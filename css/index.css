@@ -70,6 +70,53 @@
 	width: 1226px;
 	height: 100px;
 	margin: 0 auto ;
+	position: relative;
+}
+.nav_top{
+	width: 100%;
+	height: 100px;
+}
+.nav_bottom{
+	width: 100%;
+	height: 0;
+	padding: 0 140px;
+	position: absolute;
+	top: 100px;
+	left: -100px;
+	background: #fff;
+	z-index: 999;
+	box-shadow:0 9px 30px 0 rgba(191, 191, 191, .5); 
+	cursor: pointer;
+	overflow: hidden;
+
+}
+.nav_xiaoitem{
+	width: 160px;
+	height: 100%;
+	padding: 40px 16px;
+	float: left;
+}
+.nav_xiaoitem img{
+	width: 170px;
+	height: 120px;
+}
+.nav_xiaoitem h1{
+	font-size: 12px;
+	text-align: center;
+	margin-top: 10px;
+}
+.nav_xiaoitem h2{
+	font-size: 12px;
+	text-align: center;
+	margin-top: 3px;
+	color: #ff6700;
+}
+.nav_xiaoitem_line{
+	width: 1px;
+	height: 120px;
+	background: #e0e0e0;
+	float: left;
+	margin-top: 40px;
 }
 .nav_logo{
 	width: 55px;
@@ -88,9 +135,15 @@
 	line-height: 55px;
 }
 .nav_wenzi{
+	width: 510px;
 	float: left;
 	margin-left: 34px;
 
+}
+.nav_wenzi1{
+	width: 120px;
+	float: left;
+	margin-left: 0px;
 }
 .nav_wenzi span:hover{
 	color: #ff6700;
@@ -104,12 +157,15 @@
 	padding: 0 10px;
 	cursor:pointer;  
 }
+.navwenzi.active{
+	color: #ff6700;
+}
 .sousuo{
 	width: 294px;
 	height: 48px;
 	float: right;
 	margin-top: 25px;
-	background-color: pink;
+	
 }
 .input{
 	border: 1px solid #e0e0e0;
@@ -130,14 +186,29 @@
 	font-family:'iconfont';
 	font-size: 20px;
 	position: absolute;
-	right: 59px;
-	top: 65px;
+	right: -2px;
+	top: 25px;
 	outline:none;
 }
 .search:hover{
 	background-color: #ff6700;
 	color: #fff;
 }
+.nav_bottom_item{
+	width: 1226px;
+	background: #fff;
+	padding: 0 160px;
+	position: absolute;
+	top: 0;
+	left: 0px;
+	border-top: 1px solid #e0e0e0;
+}
+.nav_bottom_item.active{
+	z-index: 999; 
+    width: 100%;
+    margin-left: -70px;
+}
+
 /* #banner{
 	width: 1226px;
 	height: 460px;
@@ -167,7 +238,44 @@
 	top: 0;
 	padding:20px 0 ;
 	background-color: rgba(0, 0, 0, .6);
+	z-index: 996;
+}
+.menu{
+	width: 750px;
+	height: 460px;
+	background: #fff;
+	position: absolute;
+	border-top: 1px solid #f2f2f2;
+	left: 234px;
+	top: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	display: none;
+}
+.menu_item{
+	width: 30%;
+	height: 90px;
 	z-index: 999;
+	line-height: 70px;
+	float: left;
+
+}
+.menu_item img{
+	padding-top: 10px;
+	padding-left: 15px;
+	width: 45px;
+	height: 45px;
+	display: block;
+	float: left;
+
+}
+.menu_item h1{
+	font-size: 14px;
+	margin-left: 10px;
+	float: left;
+	color: #000;
 }
 .banner_nav li:hover {
 	background-color: #ff6700;
@@ -227,7 +335,7 @@
 	position: absolute;
 	top: 50%;
 	margin-top: -35px;
-	z-index: 999;
+	z-index: 990;
 	background-image: url("../img/1.png");
 	cursor: pointer;
 	opacity: .6;
@@ -336,6 +444,7 @@
 	top: 0;
 	bottom: 0;
 	margin: auto;
+    transition: all .5s;
 }
 .neirong_item:hover .neirong_btn1{
 	color: #fff;
@@ -374,6 +483,7 @@
 	background-color: #5f5750;
 
 }
+
 .left_ku1{
 	width: 78px;
 	height: 85px;
@@ -823,7 +933,7 @@
 	border-bottom: 2px solid #ff6700;
 	padding-bottom: 2px;
 } */
-.taipei_btn .active{
+.type.active{
 	color: #ff6700;
 	border-bottom: 2px solid #ff6700;
 	padding-bottom: 2px;
@@ -1081,10 +1191,18 @@
 .neirong_item{
 	width: 296px;
 	height: 420px;
+	margin-right: 14px;
+	background: #ccc;
+	overflow: hidden;
+	float: left;
+	position: relative;
+}
+.neirong_content{
+	width: 296px;
+	height: 420px;
 	background-color: #fff;
 	border-top: 1px solid #ffac13;
 	float: left;
-	margin-right: 14px;
 	position: relative;
 }
 .neirong_quan1{
@@ -1109,6 +1227,7 @@
 	top: 386px;
 	position: absolute;
 }
+
 .nq2{
 	margin-left: 30px;
 	left: 140px;
@@ -1117,7 +1236,7 @@
 }
 .nq4{
 	margin-left: 55px;
-	left: 70px;
+	left: 130px;
 	top: 387px;
 	position: absolute;
 }
@@ -1129,24 +1248,27 @@
 .nq5{
 
 	margin-left: 115px;
-	left: 70px;
+	left: 40px;
 	top: 387px;
 	position: absolute;
 }
 .nq6{
 	margin-left: 85px;
-	left: 70px;
+	left: 40px;
 	top: 387px;
 	position: absolute;
 }
-.neirong_item img{
+.pager.active{
+	background: #ff6700;
+}
+.neirong_content img{
 	width: 216px;
 	height: 155px;
 	margin: 0 auto;
 	display: block;
 	margin-top: 20px;
 }
-.neirong_item h1{
+.neirong_content h1{
 	text-align: center;
 	font-size: 14px;
 	color: #ff6700;
@@ -1162,20 +1284,20 @@
 .neirong_item7 h1{
 	color: #2196f3;
 }
-.neirong_item h2{
+.neirong_content h2{
 	text-align: center;
 	font-size: 12px;
 	color: #b0b0b0;
 	font-weight: normal;
 	margin-top: 11px;
 }
-.neirong_item h3{
+.neirong_content h3{
 	text-align: center;
 	font-size: 14px;
 	font-weight: normal;
 	margin-top: 40px;
 }
-.neirong_item h4{
+.neirong_content h4{
 	text-align: center;
 	font-size: 18px;
 	font-weight: normal;
@@ -1196,6 +1318,16 @@
 .neirong_item4{
 	
 	border-top-color: yellowgreen; 
+}
+
+.neirong_item .neirong_inner{
+	width: 2000px;
+	height: 420px;
+	background: #f33;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: all .5s;
 }
 .shiping{
 	width: 1226px;
